@@ -1,0 +1,24 @@
+$primary: indigo;
+$base-padding: 1rem;
+$base-border-radius: 8px;
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    &:hover{
+        opacity: 0.7;
+    }
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-github {
+    background: #00b489;
+    color: white;
+  }
+@import '../bigD';

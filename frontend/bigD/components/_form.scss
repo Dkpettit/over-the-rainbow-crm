@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+@mixin form($bgcolor: white){
+    display: flex;
+    flex-direction: column;
+    padding: $base-padding;
+    border-radius: $base-border-radius;
+    width: 90%;
+    max-width: 600px;
+    background-color: $bgcolor;
+
+    input {
+        border: 0;
+        margin: $base-margin;
+        padding: $base-padding;
+        background: #f5f5f5;
+        font-size: $font-size-sm;
+    }
+    textarea {
+        border: 0;
+        margin: $base-margin;
+        padding: $base-padding;
+        background: #f5f5f5;
+        font-size: $font-size-sm;
+    }
+}
+
+.form{
+    @include form;
+}
+
+@each $key, $val in $colors {
+    .form-#{$key}{
+        @include form($val);
+        &:hover {
+            background-color: lighten($val, 5)
+        }
+    }    
+}
+
+// @debug "Hi Dave";
+// @debug math.div(10,3);
+// @debug math.floor(2.6);
+// @debug math.max(1px, 20px, 10px, 15px);
